@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
-import FontAwesome from 'react-fontawesome'
-import './SearchBar.css'
+import React, { Component } from "react"
+import FontAwesome from "react-fontawesome"
+import "./SearchBar.css"
 
 class SearchBar extends Component {
   state = {
-    value: ''
+    value: ""
   }
 
   timeout = null
 
-  doSearch = (e) => {
+  doSearch = e => {
     this.setState({ value: e.target.value })
     clearTimeout(this.timeout)
 
@@ -18,23 +18,23 @@ class SearchBar extends Component {
     }, 500)
   }
 
-
   render() {
+    const { value } = this.state
     return (
-      <div className="rmdb-searchbar">
-        <div className="rmdb-searchbar-content">
-          <FontAwesome className="rmdb-fa-search" name="search" size="2x" />
+      <div className='rmdb-searchbar'>
+        <div className='rmdb-searchbar-content'>
+          <FontAwesome className='rmdb-fa-search' name='search' size='2x' />
           <input
-            type="text"
-            className="rmdb-searchbar-input"
-            placeholder="Search"
+            type='text'
+            className='rmdb-searchbar-input'
+            placeholder='Search'
             onChange={this.doSearch}
-            value={this.state.value}
+            value={value}
           />
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default SearchBar;
+export default SearchBar
