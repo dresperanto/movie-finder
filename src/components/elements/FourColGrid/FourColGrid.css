@@ -5,15 +5,13 @@
 
 .rmdb-grid-content {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 40px;
+  position: relative;
 }
 
 .rmdb-grid-element {
-  margin: 0 40px 40px 0;
-  background: #353535;
-  max-height: 430px;
   animation: animateGrid 0.5s;
-  overflow: hidden;
 }
 
 @keyframes animateGrid {
@@ -25,21 +23,18 @@
   }
 }
 
-/* For a 4-column grid */
-.rmdb-grid-element:nth-child(4n+4) {
-  margin-right: 0;
-}
-
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 768px) {
   .rmdb-grid-content {
-    grid-template-columns: auto auto;
-  }
-
-  .rmdb-grid-element:nth-child(2n+2) {
-    margin-right: 0;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .rmdb-grid h1 {
     font-size:22px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .rmdb-grid-content {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
