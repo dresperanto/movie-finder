@@ -31,6 +31,10 @@ class ActorDetail extends Component {
     console.log(this.state.actor)
   }
 
+  goBack = () => {
+    this.props.history.goBack()
+  }
+
   render() {
     const { name, biography, photo } = this.state
     return (
@@ -42,6 +46,9 @@ class ActorDetail extends Component {
           <h1>Hi I'm {name}</h1>
           <h3>Learn about me in the third person</h3>
           <p>{biography}</p>
+          <p>
+            <button onClick={this.goBack}>Back</button>
+          </p>
         </div>
       </div>
     )

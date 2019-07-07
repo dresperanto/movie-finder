@@ -14,24 +14,36 @@
   object-fit: cover;
   border-radius: 10px;
   margin: 0 auto;
-
 }
 
 .rmdb-actor-name {
   display: block;
-  font-family: 'Abel', sans-serif;
+  font-family: "Abel", sans-serif;
   font-size: 22px;
-  color:#fff;
+  color: #fff;
   box-sizing: border-box;
   margin: 20px 0 0 0;
 }
 
 .rmdb-actor-character {
   display: block;
-  font-family: 'Abel', sans-serif;
+  font-family: "Abel", sans-serif;
   font-size: 18px;
-  color:#fff;
- 
- 
+  color: #fff;
+
   box-sizing: border-box;
+}
+
+a.actorLink {
+  display: block;
+  font-family: "Abel", sans-serif;
+  font-size: 22px;
+  box-sizing: border-box;
+  margin: 20px 0 0 0;
+  color: #03cf71;
+  text-decoration: none;
+}
+
+a.actorLink:hover {
+  color: yellow;
 }

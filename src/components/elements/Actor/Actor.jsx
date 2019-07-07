@@ -16,9 +16,12 @@ const Actor = ({ actor }) => {
         }
         alt='actorthumb'
       />
-      <span className='rmdb-actor-name'>{actor.id}</span>
-      <Link to={{ pathname: `/actors/${actor.id}`, actorName: `${actor.name}` }}>
-        <span className='rmdb-actor-name'>{actor.name}</span>
+      {/* <span className='rmdb-actor-name'>{actor.id}</span> */}
+      <Link
+        className='actorLink'
+        to={{ pathname: `/actors/${actor.id}`, actorName: `${actor.name}` }}
+      >
+        {actor.name}
       </Link>
       <span className='rmdb-actor-character'>{actor.character}</span>
     </div>
