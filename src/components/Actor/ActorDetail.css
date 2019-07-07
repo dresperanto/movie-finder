@@ -1,0 +1,29 @@
+.flex-container {
+  display: flex;
+  font-family: "Abel", sans-serif;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1 #888 solid;
+  padding: 3rem;
+  background: #f5f5f5;
+  -webkit-box-shadow: 3px 7px 12px -7px rgba(0, 0, 0, 0.54);
+  -moz-box-shadow: 3px 7px 12px -7px rgba(0, 0, 0, 0.54);
+  box-shadow: 3px 7px 12px -7px rgba(0, 0, 0, 0.54);
+}
+
+.bio {
+  margin-left: 3rem;
+}
+
+.actorDetail {
+}
+
+.headshot {
+  max-width: 200px;
+  border: #999 solid 3px;
+  border-radius: 20px;
+  -webkit-box-shadow: 6px 10px 17px -12px rgba(0, 0, 0, 0.54);
+  -moz-box-shadow: 6px 10px 17px -12px rgba(0, 0, 0, 0.54);
+  box-shadow: 6px 10px 17px -12px rgba(0, 0, 0, 0.54);
+}
