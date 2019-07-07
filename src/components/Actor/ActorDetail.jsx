@@ -1,7 +1,8 @@
-import React, { Component } from "react"
+import React, { Component, Fragment } from "react"
 import { API_URL, API_KEY } from "../../config"
 import { IMAGE_BASE_URL, POSTER_SIZE } from "../../config"
 import "./ActorDetail.css"
+import Spinner from "../elements/Spinner/Spinner"
 
 class ActorDetail extends Component {
   state = {
@@ -36,21 +37,25 @@ class ActorDetail extends Component {
   }
 
   render() {
-    const { name, biography, photo } = this.state
+    const { name, biography, photo, loading } = this.state
     return (
-      <div className='flex-container'>
-        <div className='photo'>
-          <img className='headshot' src={photo} alt='headshot' />
+      <Fragment>
+        <div className='flex-container'>
+          {loading ? <Spinner /> : null}
+
+          <div className='photo'>
+            <img className='headshot' src={photo} alt='headshot' />
+          </div>
+          <div className='bio'>
+            <h1>Hi I'm {name}</h1>
+            <h3>Learn about me in the third person</h3>
+            <p>{biography}</p>
+            <p>
+              <button onClick={this.goBack}>Back</button>
+            </p>
+          </div>
         </div>
-        <div className='bio'>
-          <h1>Hi I'm {name}</h1>
-          <h3>Learn about me in the third person</h3>
-          <p>{biography}</p>
-          <p>
-            <button onClick={this.goBack}>Back</button>
-          </p>
-        </div>
-      </div>
+      </Fragment>
     )
   }
 }
